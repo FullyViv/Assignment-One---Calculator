@@ -1,12 +1,20 @@
-# #Allow the user to enter a calculation with two numbers and an operator, perform the calculation, and print the result. (10 marks) The allowed operators should be +, -, *, /, ^ (add, subtract, multiply, divide, power). Use separate variables to store the entered numbers and operator. 
-# #number_one = 1 number_three = 3 print (number_one + number_three)
+
+quote_me = [" 'They say it all started out with a big bang. But, what I wonder is, was it a big bang or did it just seem big because there wasn't anything else drown it out at the time?' - Karl Pilkington",
+" 'People who live in a glass house have to answer the door.' - Karl Pilkingtod", " 'Stay green, stay in the woods, and stay safe.' - Brett Pilkington", " 'Parrots have gone a bit quiet since pirates have gone.' - Little Baldy Manc Twat", " 'If you can't look a knob in the face there's something wrong.' - Mr. K Dilkington"]
+import random
+print (random.choice(quote_me))
+from datetime import datetime
+currrent_date = datetime.now()
+day_day = currrent_date.strftime("%b %d, %Y")
+time_time = currrent_date.strftime("%I:%M %p")
 print ("Welcome to the Handy Calculator!")
+print ("It is currently " + time_time + " on " + day_day)
 print ("Type in a number, then an operator, then another number and see what answer you get")
 number_one = None
 while number_one == None:
     try:
         number_one = float(input("Gimme the first number: ") )
-        print ("YAY!")
+        
     except:
         print ("OOPS TRY AGAIN")
 
@@ -45,12 +53,6 @@ while number_two == None:
         print ("OOPS TRY AGAIN")
 
     
-# number_uno = None 
-# while number_uno == None:
-#     try:
-#         number_uno = float (input("number_uno: "))
-#         print ("YAY")
-#     except:
-#         print ("TRY AGAIN")
+
 
 
