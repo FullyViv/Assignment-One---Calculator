@@ -1,9 +1,8 @@
-
+import random
+from datetime import datetime
 quote_me = [" 'They say it all started out with a big bang. But, what I wonder is, was it a big bang or did it just seem big because there wasn't anything else drown it out at the time?' - Karl Pilkington",
 " 'People who live in a glass house have to answer the door.' - Karl Pilkingtod", " 'Stay green, stay in the woods, and stay safe.' - Brett Pilkington", " 'Parrots have gone a bit quiet since pirates have gone.' - Little Baldy Manc Twat", " 'If you can't look a knob in the face there's something wrong.' - Mr. K Dilkington"]
-import random
 print (random.choice(quote_me))
-from datetime import datetime
 currrent_date = datetime.now()
 day_day = currrent_date.strftime("%b %d, %Y")
 time_time = currrent_date.strftime("%I:%M %p")
@@ -21,16 +20,8 @@ while number_one == None:
 smooth_operator = None
 while smooth_operator == None:        
     enter_smooth_operator = input("Now a smooth operator: ")
-    if enter_smooth_operator == "+":
-        smooth_operator = "+"
-    elif enter_smooth_operator == "-":
-        smooth_operator = "-"
-    elif enter_smooth_operator == "*":
-         smooth_operator = "*"   
-    elif enter_smooth_operator == "/":
-          smooth_operator = "/"  
-    elif enter_smooth_operator == "^":
-        smooth_operator = "^"  
+    if enter_smooth_operator in ["+","-","*","/","^"]:
+        smooth_operator = enter_smooth_operator
     else:
         print ("NOT SMOOTH ENOUGH")
 
